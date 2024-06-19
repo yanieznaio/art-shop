@@ -8,11 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        neue: ['var(--font-neue)'],
+        canela: ['var(--font-canela)']
       },
+      colors: {
+        'whitegrey': "#E5E7EB",
+        "cream": "#EBE8E3",
+        "grey": "#8D8583",
+        "colortext": "#EBE8E3",
+        "colortitle": "#191414",
+
+
+
+
+      }
     },
   },
   plugins: [],
