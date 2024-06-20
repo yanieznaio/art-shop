@@ -2,11 +2,25 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Menu from './Menu';
+
+import { motion } from 'framer-motion';
+
+const menuVariants = {
+    open: { x: 0 },
+    closed: { x: '-100%' },
+};
+
 const Header = () => {
     const [scrolling, setScrolling] = useState(false);
     const [whiteBackground, setWhiteBackground] = useState(false);
     const pathname = usePathname()
+    const [isOpen, setIsOpen] = useState(false);
 
+    const toggleMenu = () => {
+        console.log('Toggling menu'); // Log pour vérifier que l'événement de clic fonctionne
+        setIsOpen(!isOpen);
+    };
     const handleScroll = () => {
         if (window.scrollY > 50) {
             setScrolling(true);
@@ -39,7 +53,11 @@ const Header = () => {
 
                     <Link href="contact">Contactez nous</Link>
                 </div>
-                <Link href="" className='block md:hidden'>Menu</Link>
+                <button onClick={toggleMenu} className=" block md:hidden text-2xl p-2 z-20">
+                    ☰
+                </button>
+
+                {isOpen && <Menu isOpen={isOpen} setIsOpen={setIsOpen} toggleMenu={toggleMenu} />}
                 <Link href="/" className='uppercase font-canela absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 '>ART & BEAUTY</Link>
                 <div className='flex gap-8'>
                     <Link href="/shop" className='hidden md:block'>Shop</Link>
