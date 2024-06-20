@@ -1,8 +1,11 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 const Header = () => {
     const [scrolling, setScrolling] = useState(false);
+    const [whiteBackground, setWhiteBackground] = useState(false);
+    const pathname = usePathname()
 
     const handleScroll = () => {
         if (window.scrollY > 50) {
@@ -18,8 +21,18 @@ const Header = () => {
         };
     }, []);
 
+    useEffect(() => {
+        if (pathname != "/") {
+            setWhiteBackground(true)
+        } else {
+            setWhiteBackground(false)
+        }
+    }, [pathname])
+
+
+
     return (
-        <div className={`fixed top-0 z-50 transition-colors duration-[0.3s] ease w-full ${scrolling ? "bg-cream text-colortitle" : "bg-transparent text-whitegrey "} `}>
+        <div className={`fixed top-0 z-50 transition-colors duration-[0.3s] ease w-full ${scrolling || whiteBackground ? "bg-cream text-colortitle" : "bg-transparent text-whitegrey "} `}>
             <div className='flex justify-between w-full relative px-4 md:px-10 py-4 h-full  '>
                 <div className='md:flex gap-8 hidden'>
                     <Link href="a-propos">A propos</Link>
