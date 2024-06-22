@@ -24,13 +24,13 @@ const Menu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen, toggleMenu }) => {
 
 
         <motion.div
-            className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex flex-col items-start p-6 "
+            className="fixed top-0 left-0 w-full h-full bg-cream flex flex-col items-start p-6 text-colortitle "
             initial="closed"
             animate={isOpen ? 'open' : 'closed'}
             variants={menuVariants}
             transition={{ type: 'ease' }}
         >
-            <button onClick={toggleMenu} className="text-2xl text-white mb-4">
+            <button onClick={toggleMenu} className="text-2xl text-colortitle mb-4">
                 ✕
             </button>
             <nav>
