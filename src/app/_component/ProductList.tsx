@@ -1,42 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { products } from '@/app/data/products'
 
 
 
-const products = [
-    {
-        "title": "Statues",
-        "img": "/greek-busts-temple.jpg",
-
-    },
-    {
-        "title": "Meubles",
-        "img": "/luxury-retro-broadcast-radio-receiver.jpg",
-
-    },
-    {
-        "title": "Tableaux",
-        "img": "/sun-god-depicted-as-powerful-man-renaissance-setting.jpg",
-
-    },
-    {
-        "title": "Miroirs",
-        "img": "/kriti_6869fd48-9899-46ea-a03e-e4d759efa4a8.jpg",
-
-    },
-    {
-        "title": "Vases",
-        "img": "/ancient-pottery-vessel-with-retro-design.jpg",
-
-    },
-    {
-        "title": "Méchanique",
-        "img": "/kriti_6869fd48-9899-46ea-a03e-e4d759efa4a8.jpg",
-
-    },
-
-]
 const ProductList = () => {
     return (
         <div className='text-center pb-40'>

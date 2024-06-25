@@ -9,7 +9,7 @@ const page = () => {
             <HeroAbout />
             <Bigtext />
             <AboutProduct />
-            <BigImage src="/gorgeous-woman-with-white-hair-stands-large-chair.jpg" />
+            <BigImage src="/heroArtShop.jpg" />
 
         </>
     )

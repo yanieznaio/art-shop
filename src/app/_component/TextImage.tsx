@@ -11,7 +11,7 @@ const TextImage = () => {
                     <span> hisoire</span>
                 </h2>
                 <p className=''>
-                    We are as much storytellers as bakers. Every recipe we write evokes the sensations of a place and moment. Our traditional methods and premium ingredients create subtle, lingering experiences.
+                    Dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".
                 </p>
                 <div className='mt-6'>
                     <Link href="/shop" className="group link-button  border border-black text-xl flex w-fit justify-between items-center gap-2 m-auto hover:bg-black hover:text-white"><span>Boutique</span><span className='rounded-full flex justify-center items-center h-8 w-8 bg-black text-white group-hover:bg-white group-hover:text-black '>s</span></Link>
@@ -20,7 +20,7 @@ const TextImage = () => {
 
             </div>
             <div className='relative h-[400px] md:h-[120vh] w-[80%] m-auto md:w-1/2'>
-                <Image src="/Group_12_4782102b-32e7-429c-897b-f9257f4279d1.jpg" alt="image" fill className='object-cover' />
+                <Image src="/artSkull.jpg" alt="image" fill className='object-cover' />
             </div>
 
         </div>

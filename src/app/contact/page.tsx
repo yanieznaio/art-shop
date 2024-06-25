@@ -9,46 +9,46 @@ const page = () => {
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(false);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        console.log("Full name: ", fullname);
-        console.log("Email: ", email);
-        console.log("Message: ", message);
-
-        const res = await fetch("api/contact", {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json",
-            },
-            body: JSON.stringify({
-                fullname,
-                email,
-                message,
-            }),
-        });
-
-        const { msg, success } = await res.json();
-        setError(msg);
-        setSuccess(success);
-
-        if (success) {
-            setFullname("");
-            setEmail("");
-            setMessage("");
-        }
-    };
+    /*     const handleSubmit = async (e) => {
+            e.preventDefault();
+    
+            console.log("Full name: ", fullname);
+            console.log("Email: ", email);
+            console.log("Message: ", message);
+    
+            const res = await fetch("api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json",
+                },
+                body: JSON.stringify({
+                    fullname,
+                    email,
+                    message,
+                }),
+            });
+    
+            const { msg, success } = await res.json();
+            setError(msg);
+            setSuccess(success);
+    
+            if (success) {
+                setFullname("");
+                setEmail("");
+                setMessage("");
+            }
+        }; */
 
     return (
         <div className='min-h-screen  md:px-10 px-4 flex flex-col md:flex-row justify-between'>
             <div className='md:w-1/2 pt-40'>
                 <h1 className='md:text-6xl font-canela font-extralight flex flex-col '>
                     <span>
-                        Des Questions
+                        Des Questions ?
                     </span>
 
                     <span>
-                        dire bonjours ? envoyez votre message !
+                        envoyez votre message !
                     </span>
 
 
@@ -56,7 +56,7 @@ const page = () => {
                 <div>
 
                     <form
-                        onSubmit={handleSubmit}
+                        /*                   onSubmit={handleSubmit} */
                         className="py-4  border-t flex flex-col gap-5 w-full mt-10"
                     >
                         <div className='flex flex-col md:flex-row gap-10'>

@@ -2,46 +2,17 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-const products = [
-    {
-        "title": "France",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. ",
-        "img": "/luxury-retro-broadcast-radio-receiver.jpg"
-    },
-    {
-        "title": "Italie",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "img": "/ancient-pottery-vessel-with-retro-design.jpg"
-    },
-    {
-        "title": "Espagne",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "img": "/sun-god-depicted-as-powerful-man-renaissance-setting.jpg"
-    },
-    {
-        "title": "Gréce",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "img": "/stone-greek-goddess-head.jpg"
-    },
-
-    {
-        "title": "England",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "img": "/skull-indoors-arrangement-still-life.jpg"
-    },
-
-
-]
+import { aboutproducts } from '@/app/data/products'
 
 const AboutProduct = () => {
     const [image, setImage] = useState(0)
     return (
         <div className='md:py-40 py-20  md:px-10 px-4 '>
-            <h2 className='big-text font-canela font-extralight text-center uppercase'>Celebrez l'origine des flaveurs</h2>
+            <h2 className='big-text font-canela font-extralight text-center uppercase'>Lorem ipsum</h2>
             <div className='flex flex-col md:flex-row md:gap-20 mt-20'>
                 <div className='md:w-1/2   flex flex-col  '>
                     {
-                        products.map((product, i) => (
+                        aboutproducts.map((product, i) => (
                             <div key={i}>
                                 <div className='md:w-1/2 md:h-[120vh] h-[500px] relative block md:hidden'>
                                     <Image alt="image" src={product.img} className='object-cover ' fill />
@@ -65,7 +36,7 @@ const AboutProduct = () => {
                 </div>
 
                 <div className='md:w-1/2 md:h-[120vh] h-[600px] relative hidden md:block'>
-                    <Image alt="image" src={products[image].img} className='object-cover hidden md:block ' fill />
+                    <Image alt="image" src={aboutproducts[image].img} className='object-cover hidden md:block ' fill />
 
                 </div>
             </div>

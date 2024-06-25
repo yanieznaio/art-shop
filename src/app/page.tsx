@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <Presentation />
       <ProductList />
-      <BigImage src="/sun-god-depicted-as-powerful-man-renaissance-setting.jpg" />
+      <BigImage src="/heroArtShop.jpg" />
       <TextImage />
     </div>
 
