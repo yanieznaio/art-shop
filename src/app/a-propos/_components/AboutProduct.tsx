@@ -44,7 +44,7 @@ const AboutProduct = () => {
                         products.map((product, i) => (
                             <div key={i}>
                                 <div className='md:w-1/2 md:h-[120vh] h-[500px] relative block md:hidden'>
-                                    <Image alt="image" src={products[image].img} className='object-cover ' fill />
+                                    <Image alt="image" src={product.img} className='object-cover ' fill />
                                 </div>
                                 <div className='border-b border-colortitle group py-10 flex flex-col items-start justify-start cursor-pointer' key={i} onMouseOver={() => setImage(i)}>
                                     <h3 className={`font-canela md:text-3xl md:opacity-55 md:group-hover:opacity-100`}>{product.title}</h3>
@@ -65,7 +65,8 @@ const AboutProduct = () => {
                 </div>
 
                 <div className='md:w-1/2 md:h-[120vh] h-[600px] relative hidden md:block'>
-                    <Image alt="image" src={products[image].img} className='object-cover ' fill />
+                    <Image alt="image" src={products[image].img} className='object-cover hidden md:block ' fill />
+
                 </div>
             </div>
 
